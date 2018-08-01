@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card.js';
-import {robots} from './robots';
 
 // const cardArray = [];
 // let i=0;
@@ -16,9 +15,11 @@ import {robots} from './robots';
 //     return cardArray;
 // }
 
-export const CardList = () => {
+const CardList = ({robots}) => {
     const cardGenerator = robots.map((id, i) =>
         <Card key={i} id={robots[i].id} name={robots[i].name} username={robots[i].username} email={robots[i].email} />
     );
     return cardGenerator;
 }
+
+export default CardList;
